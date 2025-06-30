@@ -1,0 +1,126 @@
+:root {
+  --bg-light: linear-gradient(to right, #fdfbfb, #ebedee);
+  --bg-dark: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  --text-light: #000;
+  --text-dark: #fff;
+}
+
+body.light-theme {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark-theme {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  margin: 10px 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.player-input input {
+  padding: 10px;
+  margin: 10px;
+  width: 45%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.player-input button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.player-input button:hover {
+  background: #45a049;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  border-radius: 12px;
+  border: 2px solid #555;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff416c;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4b2b;
+}
+
+.scoreboard {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.theme-toggle {
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+#exit-btn {
+  background-color: #e74c3c;
+  margin-left: 15px;
+}
+
+#exit-btn:hover {
+  background-color: #c0392b;
+}

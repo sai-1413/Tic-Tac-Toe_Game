@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe - Arcade Mode</title>
+  <link rel="icon" href="Naruto.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="player-input">
+      <input type="text" id="playerX" placeholder="Enter Player X name" />
+      <input type="text" id="playerO" placeholder="Enter Player O name" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game-area" class="hidden">
+      <div class="scoreboard">
+        <span id="scoreX">0</span> : <span id="scoreO">0</span>
+        <br>
+        <small id="player-names"></small>
+      </div>
+
+      <h2 id="turn"></h2>
+
+      <div class="board" id="board"></div>
+
+      <h3 id="result"></h3>
+      <button onclick="resetGame()">Restart Game</button>
+      <button id="exit-btn" class="hidden" onclick="exitGame()">Exit Game</button>
+
+    </div>
+
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="themeSwitcher" onchange="toggleTheme()" />
+        Toggle Dark Mode 🌗
+      </label>
+    </div>
+  </div>
+
+  <!-- Sound & Confetti -->
+  <audio id="click-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+  <audio id="win-sound" src="https://www.soundjay.com/button/sounds/button-10.mp3" preload="auto"></audio>
+  <audio id="draw-sound" src="https://www.soundjay.com/button/sounds/button-4.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
