@@ -171,7 +171,7 @@ function handleMove(row, col) {
     launchConfetti();
 
     // Show exit button if someone got 3 consecutive wins
-    if (consecutiveX === 3 || consecutiveO === 3) {
+    if (consecutiveX === 2 || consecutiveO === 2) {
       document.getElementById('exit-btn').classList.remove('hidden');
       resultElement.textContent += " 🎉";
     } else {
@@ -191,7 +191,7 @@ function handleMove(row, col) {
   } else {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     updateTurnText();
-    if (currentPlayer === 'O') setTimeout(aiMove, 400);
+    if (currentPlayer === 'O') setTimeout(aiMove, 250);
     document.getElementById('exit-btn').classList.add('hidden'); // Hide during ongoing game
   }
 }
