@@ -71,7 +71,7 @@ function handleMove(row, col) {
   } else {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     updateTurnText();
-    if (currentPlayer === 'O') setTimeout(aiMove, 400);
+    if (currentPlayer === 'O') setTimeout(aiMove, 250);
   }
 }
 
